@@ -1,0 +1,53 @@
+//Colors
+
+$yellow: #ffd200;
+$red: #dd052b;
+$black: #000000;
+
+//fonts
+@font-face{
+    font-family: problacklbfont;
+    src: url(../fonts/DIN/DINPro-Black.otf)
+}
+@font-face{
+    font-family: proboldlbfont;
+    src: url(../fonts/DIN/DINPro-Bold.otf)
+}
+@font-face{
+    font-family: prolightlbfont;
+    src: url(../fonts/DIN/DINPro-Light.otf)
+}
+@font-face{
+    font-family: promediumlbfont;
+    src: url(../fonts/DIN/DINPro-Medium.otf)
+}
+@font-face{
+    font-family: proregularlbfont;
+    src: url(../fonts/DIN/DINPro-Regular.otf)
+}
+@font-face{
+    font-family: condblacklbfont;
+    src: url(../fonts/DIN/DINCond-BlackAlternate.otf)
+}
+@font-face{
+    font-family: condboldlbfont;
+    src: url(../fonts/DIN/DINCond-BoldAlternate.otf)
+}
+@font-face{
+    font-family: condlightlbfont;
+    src: url(../fonts/DIN/DINCond-LightAlternate.otf)
+}
+@font-face{
+    font-family: condmediumlbfont;
+    src: url(../fonts/DIN/DINCond-MediumAlternate.otf)
+}
+@font-face{
+    font-family: condregularlbfont;
+    src: url(../fonts/DIN/DINCond-RegularAlternate.otf)
+}
+//grid
+$gridcolumns: 8;
+$gridcolumnsdesktop: 12;
+$gridgutter: 30px;
+$gridwidth: 1200px;
+$gridwidthtablet: 700px;
