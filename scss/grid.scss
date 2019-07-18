@@ -7,8 +7,8 @@
         .col-m#{$i} {
             box-sizing: border-box;
             width: percentage($i/$gridcolumns);
-            padding-left: $gridgutter / 2;
-            padding-right: $gridgutter / 2;
+            padding-left: $gridgutter;
+            padding-right: $gridgutter;
         }
         .offset-m#{$i} {
             margin-left: percentage($i/$gridcolumns);

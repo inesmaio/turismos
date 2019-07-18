@@ -23,3 +23,10 @@ h4{
     font-weight: bolder;
     line-height: 1.17;
 }
+button{
+    background-color: $red;
+    border: solid 1px $red;
+    border-radius: 10px;
+    color: white;
+    font-family: prolightlbfont;
+}

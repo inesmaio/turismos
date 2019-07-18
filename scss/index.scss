@@ -1,5 +1,11 @@
 html{
-    background-color: $yellow;
+    //background-color: $yellow;
+    background-image: url(../img/bg/02_LB_PADRAO.jpg);
+    background-size: cover;
+
+}
+.logo{
+    margin-bottom: $gridgutter;
 }
 .presentation{
     display: flex;
@@ -7,38 +13,16 @@ html{
 }
 .wportugal{
     width: 70%;
+    margin-top: $gridgutter * 2;
+    margin-bottom: $gridgutter * 4;
 }
 .guidelines{
-    margin-top: 76px;
-    &:first-child{
-        margin-top: 0;
+   margin-top: $gridgutter * 3;
+   margin-left: $gridgutter;
+    &:first-of-type{
+       margin-top: 0;
     }
-}
-#btone{
-    position: relative;
-    border-bottom: solid 4px $red;
-    border-right: solid 4px $red;
-    border-left: solid 4px $red;
-    border-top: solid 5px transparent;
-    border-radius: 50%;
-    width: 76px;
-    height: 76px;
-    margin-left: 10px;
-    top: 10px;
-    transform: rotate(-58deg);
-    & img {
-        position: absolute;
-        transform: rotate(73deg);
-        top: 10px;
-        right: 10px;
-        left: 20px;
-    }
-    &:nth-of-type(2){
-        border-left: solid 4px transparent;
-        border-right: solid 4px transparent;
-        border-top: solid 5px $red;
-    }
-}
+ }
 #info p{
     font-family: HelveticaNeue;
     font-size: 14px;
@@ -46,4 +30,13 @@ html{
     letter-spacing: 1px;
     text-align: left;
     color: $black;
+}
+.letsgo{
+    justify-content: center;
+    display: flex;
+}
+#bletsgo{
+    margin-top: $gridgutter * 2;
+    width: 80%;
+    height: 60px;
 }
