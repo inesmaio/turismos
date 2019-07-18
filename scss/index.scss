@@ -1,0 +1,49 @@
+html{
+    background-color: $yellow;
+}
+.presentation{
+    display: flex;
+    flex-direction: column;
+}
+.wportugal{
+    width: 70%;
+}
+.guidelines{
+    margin-top: 76px;
+    &:first-child{
+        margin-top: 0;
+    }
+}
+#btone{
+    position: relative;
+    border-bottom: solid 4px $red;
+    border-right: solid 4px $red;
+    border-left: solid 4px $red;
+    border-top: solid 5px transparent;
+    border-radius: 50%;
+    width: 76px;
+    height: 76px;
+    margin-left: 10px;
+    top: 10px;
+    transform: rotate(-58deg);
+    & img {
+        position: absolute;
+        transform: rotate(73deg);
+        top: 10px;
+        right: 10px;
+        left: 20px;
+    }
+    &:nth-of-type(2){
+        border-left: solid 4px transparent;
+        border-right: solid 4px transparent;
+        border-top: solid 5px $red;
+    }
+}
+#info p{
+    font-family: HelveticaNeue;
+    font-size: 14px;
+    line-height: 1.24;
+    letter-spacing: 1px;
+    text-align: left;
+    color: $black;
+}

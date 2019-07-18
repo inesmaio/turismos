@@ -1,6 +1,24 @@
-.gridrow {
+.gridrow{
     width: 100%;
-    margin: 0;
+    margin: 0 auto;
     display: flex;
-    flex-wrap: wrap;
+    flex-direction: row;
+    @for $i from 1 through $gridcolumns {
+        .col-m#{$i} {
+            box-sizing: border-box;
+            width: percentage($i/$gridcolumns);
+            padding-left: $gridgutter / 2;
+            padding-right: $gridgutter / 2;
+        }
+        .offset-m#{$i} {
+            margin-left: percentage($i/$gridcolumns);
+        }
+    }
+    &.nogutter-m{
+        @for $i from 1 through $gridcolumns {
+            .col-m#{$i} {
+                padding: 0;
+            }
+        }
+    }
 }

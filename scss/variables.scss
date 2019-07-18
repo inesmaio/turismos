@@ -1,8 +1,14 @@
 //Colors
 
-$yellow: #ffd200;
+$yellow: #fbd12b;
 $red: #dd052b;
 $black: #000000;
+
+//grid
+$gridcolumns: 8;
+$gridcolumnsdesktop: 12;
+$gridgutter: 20px;
+$gridwidth: 1200px;
 
 //fonts
 @font-face{
@@ -45,9 +51,3 @@ $black: #000000;
     font-family: condregularlbfont;
     src: url(../fonts/DIN/DINCond-RegularAlternate.otf)
 }
-//grid
-$gridcolumns: 8;
-$gridcolumnsdesktop: 12;
-$gridgutter: 30px;
-$gridwidth: 1200px;
-$gridwidthtablet: 700px;
