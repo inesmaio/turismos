@@ -18,7 +18,7 @@ html{
 }
 .guidelines{
    margin-top: $gridgutter * 3;
-   margin-left: $gridgutter;
+   margin-left: $gridgutter * 2;
     &:first-of-type{
        margin-top: 0;
     }

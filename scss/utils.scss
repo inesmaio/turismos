@@ -24,9 +24,15 @@ h4{
     line-height: 1.17;
 }
 button{
+    text-transform: uppercase;
+    font-weight: bolder;
     background-color: $red;
     border: solid 1px $red;
-    border-radius: 10px;
+    border-radius: $gridgutter / 2;
+    box-shadow: 2px 2px 20px grey;
     color: white;
-    font-family: prolightlbfont;
+    font-family: proboldlbfont;
+    &:active {
+        background-color: $redopacity;
+    }   
 }
