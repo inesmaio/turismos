@@ -1,3 +1,16 @@
+.sticky{
+    position: sticky;
+    top: 0;
+    box-sizing: border-box;
+}
+.sticky_bottom{
+    position: sticky;
+    bottom: 0;
+    padding: $gridgutter;
+}
+.menu{
+    width: auto !important;
+}
 .textcenter{
     text-align: center;
 }
@@ -5,8 +18,31 @@
     display: flex;
     justify-content: center;
 }
+.bold{
+    font-weight: bolder;
+}
+li{
+    font-family: HelveticaNeue;
+    list-style-type: none;
+    margin-top: $gridgutter / 2;
+}
 p{
     margin: 0;
+    font-family: HelveticaNeue;
+    line-height: 25px;
+}
+h1{
+    font-size: 30px;
+    font-family: condboldlbfont;
+    font-weight: bolder;
+    line-height: 1.17;
+    text-transform: uppercase;
+    letter-spacing: 4px;
+}
+h2{
+    font-size: 24px;
+    font-family: proboldlbfont;
+    line-height: 1.17;
 }
 h3{
     font-size: 12px;
@@ -33,6 +69,23 @@ button{
     color: white;
     font-family: proboldlbfont;
     &:active {
-        background-color: $redopacity;
-    }   
+        background-color: $redactivebutton;
+        box-shadow: none;
+        outline: 0;
+    }&:focus {
+        box-shadow: none;
+        outline: 0;
+    }
+}
+.topheader{
+    background-color: $yellow;
+    background-size: contain;
+    color: $black;
+    box-shadow: 0 4px 2px -2px black;
+}
+.footer{
+    flex-direction: column;
+    margin: $gridgutter * 1.5;
+    background-color: grey;
+
 }

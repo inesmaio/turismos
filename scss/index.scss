@@ -1,11 +1,9 @@
-html{
-    //background-color: $yellow;
-    background-image: url(../img/bg/02_LB_PADRAO.jpg);
-    background-size: cover;
-
+body{
+    background-color: $yellow;
 }
 .logo{
     margin-bottom: $gridgutter;
+    width: 100%;
 }
 .presentation{
     display: flex;
@@ -17,11 +15,7 @@ html{
     margin-bottom: $gridgutter * 4;
 }
 .guidelines{
-   margin-top: $gridgutter * 3;
-   margin-left: $gridgutter * 2;
-    &:first-of-type{
-       margin-top: 0;
-    }
+    padding-bottom: $gridgutter * 2.5;
  }
 #info p{
     font-family: HelveticaNeue;
@@ -31,12 +25,13 @@ html{
     text-align: left;
     color: $black;
 }
+
 .letsgo{
     justify-content: center;
     display: flex;
 }
-#bletsgo{
-    margin-top: $gridgutter * 2;
+.bletsgo{
+    margin: $gridgutter * 2 0;
     width: 80%;
     height: 60px;
 }
