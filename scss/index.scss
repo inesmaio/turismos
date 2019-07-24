@@ -43,11 +43,6 @@ header{
     justify-content: center;
     display: flex;
 }
-.bletsgo{
-    margin: $gridgutter * 2 0;
-    width: 80%;
-    height: 60px;
-}
 .logos{
     display: flex;
     justify-content: flex-end;
@@ -75,6 +70,9 @@ header{
             display: flex;
         }
     }
+    .banner{
+        flex-direction: column;
+    }
     .about{
         display: initial;
         & article{
@@ -101,9 +99,16 @@ header{
             text-align: center;
         }
     }
+    .guidelines{
+        display: flex;
+        flex-direction: row;
+    }
     .guidelines_container{
         padding: $gridgutter * 6;
         box-sizing: border-box;
+    }
+    .guidelines_img{
+        padding-right: 30px;
     }
     .wportugal{
         margin-bottom: 0;

@@ -44,7 +44,7 @@ p{
     font-size: $gridgutter;
 }
 h1{
-    font-size: 30px;
+    font-size: 70px;
     font-family: condboldlbfont;
     font-weight: bolder;
     line-height: 1.17;
@@ -97,6 +97,10 @@ button{
     box-shadow: 2px 2px 20px grey;
     color: white;
     font-family: proboldlbfont;
+    margin: 40px 0;
+    width: 25%;
+    height: 60px;
+    font-size: 20px;
     &:active {
         background-color: $redactivebutton;
         box-shadow: none;
@@ -109,14 +113,15 @@ button{
 .yellowbutton{
     text-transform: uppercase;
     font-weight: bolder;
-    background-color: $yellow;
-    border: solid 1px $red;
-    border-radius: $gridgutter / 2;
-    box-shadow: 2px 2px 20px grey;
-    color: $red;
+    background-color: #fbd12b;
+    border: solid 2px #dd052b;
+    border-radius: 10px;
+    box-shadow: 2px 2px 2px grey;
+    color: #dd052b;
     font-family: proboldlbfont;
     width: 90%;
     height: 70%;
+    font-size: 20px;
     &:active {
         box-shadow: none;
         outline: 0;
