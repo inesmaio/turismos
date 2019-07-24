@@ -9,7 +9,12 @@
     padding: $gridgutter;
 }
 .menu{
-    width: auto !important;
+    width: $gridgutter * 1.5 !important;
+}
+.menucontainer, .buttoncontainer{
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 .textcenter{
     text-align: center;
@@ -17,6 +22,12 @@
 .contentcenter{
     display: flex;
     justify-content: center;
+    align-items: center;
+}
+.alignleft{
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
 }
 .bold{
     font-weight: bolder;
@@ -29,7 +40,8 @@ li{
 p{
     margin: 0;
     font-family: HelveticaNeue;
-    line-height: 25px;
+    line-height: $gridgutter * 1.5;
+    font-size: $gridgutter;
 }
 h1{
     font-size: 30px;
@@ -40,9 +52,26 @@ h1{
     letter-spacing: 4px;
 }
 h2{
-    font-size: 24px;
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    font-size: $gridgutter * 1.5;
     font-family: proboldlbfont;
     line-height: 1.17;
+    color: $red;
+    margin-top: $gridgutter * 8;
+    &:before,
+    &:after {
+        content: '';
+        border-top: 2px solid;
+        margin: 0px 20px 0px 60px;
+        flex: 1 0 20px;
+    }
+    &:after {
+        margin: 0px 60px 0px 20px;
+    }
 }
 h3{
     font-size: 12px;
@@ -77,15 +106,41 @@ button{
         outline: 0;
     }
 }
+.yellowbutton{
+    text-transform: uppercase;
+    font-weight: bolder;
+    background-color: $yellow;
+    border: solid 1px $red;
+    border-radius: $gridgutter / 2;
+    box-shadow: 2px 2px 20px grey;
+    color: $red;
+    font-family: proboldlbfont;
+    width: 90%;
+    height: 70%;
+    &:active {
+        box-shadow: none;
+        outline: 0;
+    }&:focus {
+        box-shadow: none;
+        outline: 0;
+    }
+}
 .topheader{
     background-color: $yellow;
     background-size: contain;
     color: $black;
     box-shadow: 0 4px 2px -2px black;
 }
-.footer{
-    flex-direction: column;
-    margin: $gridgutter * 1.5;
-    background-color: grey;
-
+a{
+    font-family: HelveticaNeue;
+    color: $black;
+    &:link,:visited,:active {
+        text-decoration: none;
+    }
+    &:hover {
+    text-decoration: underline;
+  }
+}
+@media (min-width: 1224px){
+    
 }

@@ -22,3 +22,25 @@
         }
     }
 }
+@media (min-width: 1224px){
+    .gridrowfull, .gridrow{
+        @for $i from 1 through $gridcolumnsdesktop {
+            .col#{$i} {
+                box-sizing: border-box;
+                width: percentage($i/$gridcolumnsdesktop);
+                padding-left: $gridgutter / 2;
+                padding-right: $gridgutter / 2;
+            }
+            .offset#{$i} {
+                margin-left: percentage($i/$gridcolumns);
+            }
+        }
+        &.nogutter{
+            @for $i from 1 through $gridcolumns {
+                .col#{$i} {
+                    padding: 0;
+                }
+            }
+        }
+    }
+}
