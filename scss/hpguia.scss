@@ -12,21 +12,8 @@ header{
     margin-bottom: $gridgutter;
     width: 80%;
 }
-.presentation{
-    display: flex;
-    flex-direction: column;
-}
-.wportugal{
-    width: 70%;
-    margin-top: $gridgutter * 2;
-}
 .banner, .about, .topheader_index, .footer, .title{
     display: none;
-}
-.how_to_host{
-    & h2{
-        display: none
-    }
 }
 .guidelines{
     margin-top: 100px;
@@ -34,34 +21,18 @@ header{
 .info p{
     text-align: left;
 }
-.letsgo{
-    justify-content: center;
-    display: flex;
-}
-.logos{
-    display: flex;
-    justify-content: flex-end;
-    align-items: center;
-    font-size: 20px;
-}
-.links{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding: $gridgutter * 2;
-}
-.single_link{
-    margin-bottom: $gridgutter * 2;
-}
-.img_bottles{
-    width: 100%;
-}
 .dbredbutton{
     margin: 100px 0;
 }
 .redessocias{
     height: 175px;
     border-bottom: 4px solid $yellow;
+}
+.img_bottles{
+    width: 100%;
+}
+.bottles{
+    padding-right: 60px !important;
 }
 .footer{
     height: 175px;
@@ -71,7 +42,7 @@ header{
         background-image: url(../img/assets/BannerHeaderGuia.png);
         background-size: cover;
     }
-    .presentation{
+    .hedear_logos{
         display: none;
     }
     .banner, .topheader_index, .footer, .title{
@@ -105,9 +76,6 @@ header{
             padding-right: $gridgutter * 15; 
             text-align: center;
         }
-    }
-    .guidelines{
-        width: 80%;
     }
     .wportugal{
         margin-bottom: 0;

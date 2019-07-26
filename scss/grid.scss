@@ -1,4 +1,4 @@
-.gridrow{
+.gridrow {
     width: 100%;
     margin: 0 auto;
     display: flex;
@@ -32,11 +32,11 @@
                 padding-right: $gridgutter / 2;
             }
             .offset#{$i} {
-                margin-left: percentage($i/$gridcolumns);
+                margin-left: percentage($i/$gridcolumnsdesktop);
             }
         }
         &.nogutter{
-            @for $i from 1 through $gridcolumns {
+            @for $i from 1 through $gridcolumnsdesktop {
                 .col#{$i} {
                     padding: 0;
                 }
