@@ -23,7 +23,7 @@
     }
 }
 @media (min-width: 1224px){
-    .gridrowfull, .gridrow{
+    .gridrow{
         @for $i from 1 through $gridcolumnsdesktop {
             .col#{$i} {
                 box-sizing: border-box;

@@ -1,8 +1,12 @@
-body{
-    background-color: $yellow;
+.index{
+    background-image: url(../img/bg/02_LB_PADRAO.jpg);
+    background-size: contain;
 }
 header{
     display: none;
+}
+.title_hpguia{
+    margin: 0 0 50px 0;
 }
 .logo{
     margin-bottom: $gridgutter;
@@ -16,7 +20,7 @@ header{
     width: 70%;
     margin-top: $gridgutter * 2;
 }
-.banner, .about, .topheader, .footer{
+.banner, .about, .topheader_index, .footer, .title{
     display: none;
 }
 .how_to_host{
@@ -25,19 +29,10 @@ header{
     }
 }
 .guidelines{
-    padding: 0 50px;
-    margin: 50px 0;
-}
-.guidelines_img{
-    margin-bottom: 30px;
+    margin-top: 100px;
 }
 .info p{
-    font-family: HelveticaNeue;
-    font-size: 14px;
-    line-height: 1.24;
-    letter-spacing: 1px;
     text-align: left;
-    color: $black;
 }
 .letsgo{
     justify-content: center;
@@ -58,23 +53,36 @@ header{
 .single_link{
     margin-bottom: $gridgutter * 2;
 }
+.img_bottles{
+    width: 100%;
+}
+.dbredbutton{
+    margin: 100px 0;
+}
+.redessocias{
+    height: 175px;
+    border-bottom: 4px solid $yellow;
+}
+.footer{
+    height: 175px;
+}
 @media (min-width: 1224px){
+    .header_bg_img{
+        background-image: url(../img/assets/BannerHeaderGuia.png);
+        background-size: cover;
+    }
     .presentation{
         display: none;
     }
-    .banner, .topheader, .footer{
+    .banner, .topheader_index, .footer, .title{
         display: flex;
-    }
-    .how_to_host{
-        & h2{
-            display: flex;
-        }
     }
     .banner{
         flex-direction: column;
     }
     .about{
-        display: initial;
+        display: flex;
+        flex-direction: column;
         & article{
             margin-top: 60px;
             margin-bottom: 60px;
@@ -82,14 +90,13 @@ header{
     }
     .about_photo{
         width: 100%;
-        height: 680px;
-        background-image: url("https://placebear.com/1200/600");
+        height: 600px;
+        background-image: url("../img/assets/bannerGuiAbout.png");
         background-size: cover;
     }
     header{
         display: flex;
         height: 700px;
-        background-color: white;
         align-items: center;
     }
     .about_p{
@@ -100,26 +107,10 @@ header{
         }
     }
     .guidelines{
-        display: flex;
-        flex-direction: row;
-    }
-    .guidelines_container{
-        padding: $gridgutter * 6;
-        box-sizing: border-box;
-    }
-    .guidelines_img{
-        padding-right: 30px;
+        width: 80%;
     }
     .wportugal{
         margin-bottom: 0;
-    }
-    .info p{
-        font-size: 19px;
-        line-height: 1.4;
-        letter-spacing: 2px;
-    }
-    .links{
-        flex-direction: row;
     }
     .links_container{
         display: flex;
@@ -133,9 +124,7 @@ header{
     .logo_wip, .logo_lc, .logo_pdr{
         height: 100%;
     }
-    footer{
-        flex-direction: column;
-        margin: $gridgutter * 1.5;
-        background-color: $grey;
+    .footer{
+        height: auto;
     }
 }
