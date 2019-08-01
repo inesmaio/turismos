@@ -2,12 +2,12 @@
     position: sticky;
     box-sizing: border-box;
     top:0;
+    z-index: 1;
 }
 .sticky_info{
-    position: sticky;
+    position: initial;
     box-sizing: border-box;
-    align-self: flex-start;
-    top:200px;
+    align-self: center;
 }
 .sticky_bottom{
     position: sticky;
@@ -17,10 +17,8 @@
 .menu{
     width: $gridgutter * 1.5 !important;
 }
-.menucontainer, .buttoncontainer{
+.menucontainer{
     display: flex;
-    align-items: center;
-    justify-content: center;
 }
 .textcenter{
     text-align: center;
@@ -39,8 +37,20 @@
     display: flex;
     flex-direction: column;
 }
+.row{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
 .bold{
     font-weight: bolder;
+}
+.lighter{
+    font-family: prolightlbfont;
+    font-size: 12px;
+}
+.red{
+    color: $red;
 }
 li{
     font-family: HelveticaNeue;
@@ -51,7 +61,7 @@ p{
     margin: 0;
     font-family: HelveticaNeue;
     line-height: $gridgutter * 1.5;
-    font-size: $gridgutter;
+    font-size: 10px;
     letter-spacing: 2px;
     color: $black;
 }
@@ -68,58 +78,42 @@ h2{
     justify-content: center;
     align-items: center;
     text-align: center;
-    font-size: $gridgutter * 1.5;
+    font-size: 15px;
     font-family: proboldlbfont;
     line-height: 1.17;
     color: $red;
-    margin-top: $gridgutter * 8;
-    &:before,
-    &:after {
-        content: '';
-        border-top: 2px solid;
-        margin: 0px 20px 0px 60px;
-        flex: 1 0 20px;
-    }
-    &:after {
-        margin: 0px 60px 0px 20px;
-    }
+    margin-top: 20px;
 }
 h3{
-    font-size: $gridgutter * 1.5;
+    font-size: 15px;
     font-family: proboldlbfont;
     font-weight: bolder;
     line-height: 1.17;
     text-transform: uppercase;
-    margin: 0;
+    margin-bottom: 20px;
 }
 h4{
     margin: 0;
     margin-bottom: $gridgutter / 2;
-    font-size: $gridgutter * 1.5;
+    font-size: 15px;
     font-family: proboldlbfont;
     font-weight: bolder;
     line-height: 1.17;
 }
-button{
+.button{
     text-transform: uppercase;
     font-weight: bolder;
     background-color: $red;
     border: solid 1px $red;
-    border-radius: $gridgutter / 2;
+    border-radius: 4px;
     box-shadow: 2px 2px 20px grey;
     color: white;
     font-family: proboldlbfont;
-    margin: 40px 0;
-    height: 60px;
-    font-size: 20px;
-    &:active {
-        background-color: $redactivebutton;
-        color: white;
-        box-shadow: none;
-        outline: 0;
-    }&:focus {
-        background-color: $redactivebutton;
-        color: white;
+    height: $gridgutter * 2.5;
+    cursor: pointer;
+    &:hover, &:focus {
+        background-color: $yellow;
+        color: $red;
         box-shadow: none;
         outline: 0;
     }
@@ -129,53 +123,57 @@ button{
     font-weight: bolder;
     background-color: #fbd12b;
     border: solid 2px #dd052b;
-    border-radius: 10px;
     box-shadow: 2px 2px 2px grey;
     color: #dd052b;
     font-family: proboldlbfont;
-    width: 100%;
-    height: 40%;
-    font-size: $gridgutter;
-    margin-right: $gridgutter * 2;
-    &:active {
-        color: white;
-        box-shadow: none;
-        outline: 0;
-    }&:focus {
-        color: white;
-        box-shadow: none;
-        outline: 0;
+    font-size: 10px;
+    &:hover, &:focus {
+        background-color: $red;
+        color: $yellow;
     }
 }
+
 .button_upload{
-    margin-top: 0px;
+    display: flex;
+    height: 20px;
+    align-items: center;
+    padding: 10px;
     text-transform: uppercase;
     font-weight: bolder;
     background-color: white;
     border: solid 2px grey;
-    border-radius: 4px;
     box-shadow: 0px 2px 2px grey;
     color: grey;
     font-family: proboldlbfont;
-    width: 100%;
-    font-size: 20px;
-    &:active {
-        background-color: lightgrey;
-        box-shadow: none;
-        outline: 0;
-    }&:focus {
+    font-size: 15px;
+    &:hover, &:focus {
         background-color: lightgrey;
         box-shadow: none;
         outline: 0;
     }
 }
-.topheader_index{
+input:focus:required:invalid{
+    border: solid 3px red;
+    box-shadow: 0 -4px 2px -2px red;
+}
+textarea:focus:required:invalid{
+    border: solid 3px red;
+    box-shadow: 0 -4px 2px -2px red;
+}
+.submit_button{
+    margin: 50px 0;
+}
+.hidden{
+    display: none;
+}
+.topheader{
     background-color: $yellow;
     background-size: contain;
     color: $black;
     box-shadow: 0 4px 2px -2px grey;
+    padding: 10px 0;
 }
-a{
+.link{
     font-family: HelveticaNeue;
     color: $black;
     padding-right: $gridgutter * 2;
@@ -186,26 +184,52 @@ a{
     text-decoration: underline;
   }
 }
-form{
-    & input{
-        width: 100%;
-        height: 55px;
-        border: 1px solid grey;
-        border-radius: 4px;
-        box-shadow: 0 -4px 2px -2px grey;
-        margin-bottom: $gridgutter * 1.5;
-        padding-left: 10px;
-        font-family: HelveticaNeue;
-        &[type="date"], &[type="button"]{
-            background-color: white;
-        }
-        
-
-    }
-}
-.img_container{
-    margin: 40px 0;
+img{
+    width: 100%;
 }
 .bggrey{
     background-color: $grey;
+}
+.redessocias{
+    height: 175px;
+    border-bottom: 4px solid $yellow;
+    & img{
+        padding: 0 10px;
+    }
+}
+@media (min-width: 1224px){
+    p{
+        font-size: 15px;
+    }
+    .sticky_info{
+        position: sticky;
+        box-sizing: border-box;
+        align-self: flex-start;
+        top:150px;
+    }
+    .yellowbutton{
+        font-size: 20px;
+        
+    }
+    h2{
+        font-size: $gridgutter;
+        margin-top: $gridgutter * 3;
+        &:before,
+        &:after {
+            content: '';
+            border-top: 2px solid;
+            margin: 0px 20px 0px 60px;
+            flex: 1 0 20px;
+        }
+        &:after {
+            margin: 0px 60px 0px 20px;
+        }
+    }
+    h3{
+        font-size: $gridgutter;
+        margin: 0;
+    }
+    .button_upload{
+        height: $gridgutter * 2.5;
+    }
 }

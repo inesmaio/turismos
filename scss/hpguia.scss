@@ -16,7 +16,7 @@ header{
     display: none;
 }
 .guidelines{
-    margin-top: 100px;
+    margin-top: 80px;
 }
 .info p{
     text-align: left;
@@ -24,15 +24,14 @@ header{
 .dbredbutton{
     margin: 100px 0;
 }
-.redessocias{
-    height: 175px;
-    border-bottom: 4px solid $yellow;
-}
 .img_bottles{
-    width: 100%;
+    width: 100px;
+    height: 100px;
+    margin-bottom: $gridgutter;
 }
-.bottles{
-    padding-right: 60px !important;
+.bottles_container{
+    display: flex;
+    justify-content: flex-start;
 }
 .footer{
     height: 175px;
@@ -70,6 +69,13 @@ header{
         height: 700px;
         align-items: center;
     }
+    .topheader_index{
+        background-color: $yellow;
+        background-size: contain;
+        color: $black;
+        box-shadow: 0 4px 2px -2px grey;
+        padding: 10px 0;
+    }
     .about_p{
         & p{
             padding-left: $gridgutter * 15; 
@@ -77,14 +83,21 @@ header{
             text-align: center;
         }
     }
-    .wportugal{
-        margin-bottom: 0;
+    .guidelines{
+        flex-direction: row;
+    }
+    .bottles_container {
+        justify-content: flex-end;
+    }
+    .img_bottles{
+        width: 140px;
+        height: 140px;
     }
     .links_container{
         display: flex;
         justify-content: flex-end;
         align-items: center;
-        font-size: 14px;
+        font-size: 12px;
     }
     .single_link{
         padding-right: $gridgutter * 2;

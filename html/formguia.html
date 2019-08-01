@@ -5,83 +5,262 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link type="text/css" rel="stylesheet" href="../css/styles.css" />
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
         <script type="text/javascript" src="../script.js"></script>
     </head>
     <body>
         <section class="sticky_header">
             <nav class="gridrow topheader">
-                <div class="col2 menucontainer">
+                <div class="col3 col-m1 offset1 menucontainer">
                     <img class="menu" src="../img/assets/menu.svg" alt="hamburguer menu">
                 </div>
-                <div class="col8 contentcenter img_container">
-                    <img class="col8" src="../img/logo/WhenInPortugal_logo-03.svg" alt="When in Portugal">
+                <div class="col6 col-m5 contentcenter">
+                    <img class="winPortugal_img" src="../img/logo/WhenInPortugal_logo-03.svg" alt="When in Portugal">
                 </div>
-                <div class="col2 buttoncontainer">
-                    <button class="yellowbutton" type="button" onclick="location.href = '#'">Become a Host</button>
+                <div class="col3 col-m2 offset1 contentcenter">
+                    <button class="yellowbutton button" type="button" onclick="location.href = '#'">Become a Buddy</button>
                 </div>
             </nav>
         </section>
         <h2 class="form_title">Torna-te um Guia Local</h2>
-        <section class="gridrow info">
-            <section class="sticky_info col4 info_title">
-                <h3>Informação Pessoal</h3>
-            </section>
-            <section class="col1"></section>
-            <section class="col5 info_form">
-                <form>
-                    <div class="form_nome">
-                        <h4>Nome</h4>
-                        <input type="text" name="firstname" placeholder="Nome">
+        <form class="gridrow column" novalidate>
+            <section class="gridrow offset1 info">
+                <section class="sticky_info col4 info_title">
+                    <h3>Informação Pessoal</h3>
+                </section>
+            <section class="col-m8 col5 info_form">
+                    <div class="col-m8 col12 form_nome">
+                        <h4>Nome <span class="red">*</span><span class="error" id="name"> Por favor preencha o campo</span></h4>
+                        <input class="form_field" type="text" id="firstname" name="firstname" placeholder="Nome" onblur="validateText()">
                     </div>
-                    <div class="form_aniv">
-                        <h4>Data de Aniversário</h4>
-                        <input type="date" name="birthdate" placeholder="mês/dia/ano">
+                    <div class="col-m8 col12 form_aniv">
+                        <h4>Data de Aniversário <span class="red">*</span></h4>
+                        <input class="form_field" type="date" name="birthdate" placeholder="mês/dia/ano">
                     </div>
-                    <div class="form_email">
-                        <h4>Email</h4>
-                        <input type="email" name="email" placeholder="Email">
+                    <div class="col-m8 col12 form_email">
+                        <h4>Email <span class="red">*</span><span class="error" id="emptyField"> Por favor preencha o campo</span></h4></h4>
+                        <input class="form_field" type="email" id="email" placeholder="Email" onblur="validateEmail()">
                     </div>
-                    <div class="form_phone_cc">
-                        <div class="gridrow">
+                    <div class="col-m8 col12 gridrow form_phone_cc">
+                        <div class="nogutter-m8 col6 phone">
+                            <h4>Telefone <span class="red">*</span></h4>
+                            <input class="form_field" type="number" name="phone" placeholder="número de telefone">
+                        </div>
+                        <div class="nogutter-m8 col6 cc">
+                            <h4>Cartão de Cidadão</h4>
                             <div>
-                                <h4>Telefone</h4>
-                                <input type="number" name="phone" placeholder="número de telefone">
-                            </div>
-                            <div class="rowfields">
-                                <h4>Cartão de Cidadão</h4>
-                                <div class="btnwraper">
-                                    <button class="button_upload">Upload</button>
-                                    <input type="file" name="cc" accept=".jpg, .pdf" value="upload">
-                                </div>
+                                <label for="up_button" class="col8 button button_upload">
+                                    <img class="upload_img" src="../img/assets/upload.svg" alt="upload button">
+                                    Upload
+                                </label>
+                                <input class="col12 form_field hidden" type="file" name="cc" accept=".jpg, .pdf" id="up_button">
                             </div>
                         </div>
                     </div>
-                    <div class="foto_container">
-                        <h4>Foto de Perfil</h4>
-                        <div class="btnwraper">
-                            <button class="button_upload">Upload</button>
-                            <input type="file" name="cc" accept=".jpg, .pdf" value="upload">
+                    <div class="gridrow column foto_container">
+                        <h4 class="col-m8 col6 foto_prefil">Foto de Perfil</h4>
+                        <div class="col-m8 col6">
+                            <label for="up_button" class="col8 button button_upload">
+                                <img class="upload_img" src="../img/assets/upload.svg" alt="upload button">
+                                Upload
+                            </label>
+                            <input class="col12 form_field hidden" type="file" name="cc" accept=".jpg, .pdf" id="up_button" required>
                         </div>
                     </div>
-                </form>
             </section>
-            <section class="col2"></section>
         </section>
-        <footer class="footer gridrow nogutter">
+        <section class="col2"></section>
+        <h2 class="col12 form_title_empty"></h2>
+        <section class="gridrow offset1">
+            <section class="col4 sticky_info col4 info_title column about_you">
+                <h3>Questões</h3>
+                <p>Conta-nos mais sobre ti</p>
+            </section>
+            <section class="col5">
+                <section class="col12 form_nome" novalidate>
+                    <h4>Introduza-se e faça uma pequena apresentação <span class="red">*</span></h4>
+                    <textarea class="form_field textarea" name="self_presentation" placeholder="o teu texto"></textarea>
+                </section>
+                <section class="col12">
+                    <h4>Quais são os teus interesses? <span class="red">*</span><span class="lighter"> máximo 4</span></h4>
+                </section>
+                <section class="gridrow">
+                    <article class="col6 column">
+                        <div class="col12 checkbox">
+                            <input class="hidden interests" type="checkbox" id="artes" name="interests" onclick="return maxFour()">
+                            <label class="row" for="artes">
+                                <span class="col10 checkbox_label">Artes e Museus</span>
+                            </label>
+                        </div>
+                        <div class="col12 checkbox">
+                            <input class="hidden interests" type="checkbox" id="historia" name="interests" onclick="return maxFour()">
+                            <label class="row" for="historia">
+                                <span class="col10 checkbox_label">História e Cultura</span>
+                            </label>
+                        </div>
+                        <div class="col12 checkbox">
+                            <input class="hidden interests" type="checkbox" id="traducoes" name="interests" onclick="return maxFour()">
+                            <label class="row" for="traducoes">
+                                <span class="col10 checkbox_label">Traduções</span>
+                            </label>
+                        </div>
+                        <div class="col12 checkbox">
+                            <input class="hidden interests" type="checkbox" id="explorar" name="interests" onclick="return maxFour()">
+                            <label class="row" for="explorar">
+                                <span class="col10 checkbox_label">Explorar</span>
+                            </label>
+                        </div>
+                        <div class="col12 checkbox">
+                            <input class="hidden interests" type="checkbox" id="desporto" name="interests" onclick="return maxFour()">
+                            <label class="row" for="desporto">
+                                <span class="col10 checkbox_label">Desporto e Lazer</span>
+                            </label>
+                        </div> 
+                    </article>
+                    <article class="col6 column">
+                        <div class="col12 checkbox">
+                            <input class="hidden interests" type="checkbox" id="bares" name="interests" required onclick="return maxFour()">
+                            <label class="row" for="bares">
+                                <span class="col10 checkbox_label">Bares e Vida Noturna</span>
+                            </label>
+                        </div>
+                        <div class="col12 checkbox">
+                            <input class="hidden interests" type="checkbox" id="restaurantes" name="interests" onclick="return maxFour()">
+                            <label class="row" for="restaurantes">
+                                <span class="col10 checkbox_label">Restaurantes</span>
+                            </label>
+                        </div>
+                        <div class="col12 checkbox">
+                            <input class="hidden interests" type="checkbox" id="compras" name="interests" onclick="return maxFour()">
+                            <label class="row" for="compras">
+                                <span class="col10 checkbox_label">Compras</span>
+                            </label>
+                        </div>
+                        <div class="col12 checkbox">
+                            <input class="hidden interests" type="checkbox" id="passeios" name="interests" onclick="return maxFour()">
+                            <label class="row" for="passeios">
+                                <span class="col10 checkbox_label">Passeios de Carro</span>
+                            </label>
+                        </div>
+                    </article>
+                </section>
+                <section class="col12 field_title">
+                    <h4>Quais são as línguas que falas? <span class="red">*</span></h4>
+                </section>
+                <section class="gridrow">
+                    <article class="col4 column">
+                        <div class="col12 checkbox">
+                            <input class="hidden lang" type="checkbox" id="ingles" name="lang">
+                            <label class="row" for="ingles">
+                                <span class="col10 checkbox_label">Inglês</span>
+                            </label>
+                        </div>
+                        <div class="col12 checkbox">
+                            <input class="hidden lang" type="checkbox" id="espanhol" name="lang">
+                            <label class="row" for="espanhol">
+                                <span class="col10 checkbox_label">Espanhol</span>
+                            </label>
+                        </div>
+                        <div class="col12 checkbox">
+                            <input class="hidden lang" type="checkbox" id="grego" name="lang">
+                            <label class="row" for="grego">
+                                <span class="col10 checkbox_label">Grego</span>
+                            </label>
+                        </div>
+                    </article>
+                    <article class="col4 column">
+                        <div class="col12 checkbox">
+                            <input class="hidden lang" type="checkbox" id="alemao" name="lang">
+                            <label class="row" for="alemao">
+                                <span class="col10 checkbox_label">Alemão</span>
+                            </label>
+                        </div>
+                        <div class="col12 checkbox">
+                            <input class="hidden lang" type="checkbox" id="italiano" name="lang">
+                            <label class="row" for="italiano">
+                                <span class="col10 checkbox_label">Italiano</span>
+                            </label>
+                        </div>
+                        <div class="col12 checkbox">
+                            <input class="hidden lang" type="checkbox" id="chines" name="lang">
+                            <label class="row" for="chines">
+                                <span class="col10 checkbox_label">Chinês</span>
+                            </label>
+                        </div>
+                    </article>
+                    <article class="col4 column">
+                        <div class="col12 checkbox">
+                            <input class="hidden lang" type="checkbox" id="portugues" name="lang">
+                            <label class="row" for="portugues">
+                                <span class="col10 checkbox_label">Português</span>
+                            </label>
+                        </div>
+                        <div class="col12 checkbox">
+                            <input class="hidden" type="checkbox" id="frances" name="lang">
+                            <label class="row" for="frances">
+                                <span class="col10 checkbox_label">Francês</span>
+                            </label>
+                        </div>
+                    </article>
+                </section>
+                <section class="gridrow column foto_container">
+                    <h4 class="col12 field_title">Conta-nos porque adoras a tua cidade! <span class="lighter">Num vídeo max. 1 minuto</span></h4>
+                    <article class="col12">
+                        <label for="up_button" class="col4 button button_upload">
+                            <img class="upload_img" src="../img/assets/upload.svg" alt="upload button">
+                            Upload
+                        </label>
+                        <input class="col12 form_field hidden" type="file" name="cc" accept=".mp4, .avi" id="up_button">
+                    </article>
+                </section>
+                <section class="gridrow field_title column">
+                    <article class="col12 field_title checkbox">
+                        <input class="hidden" type="checkbox" id="adulto" name="adulto">
+                        <label class="row" for="adulto">
+                            <span class="col10 checkbox_label">Tenho mais de 18 anos e concordo com os termos e condições. <span class="red">*</span></span>
+                        </label>
+                    </article>
+                    <article class="col12 field_title checkbox">
+                        <input class="hidden" type="checkbox" id="gdpr" name="gdpr">
+                        <label class="row" for="gdpr">
+                            <span class="col10 checkbox_label">Autorizo o armazenamento e tratamento dos meus dados para fins de Marketing, nomeadamente Marketing Direto, Email Marketing e Targeting em redes sociais</span>
+                        </label>
+                    </article>
+                </section>
+                <section class="gridrow">
+                    <input class="col4 button submit_button" type="submit" value="Submit">
+                </section>
+            </section>
+        </form>
+        </section>
+            <section class="col1"></section>
+        </section>
+        <section class="gridrow contentcenter bggrey redessocias">
+            <a href="https://www.facebook.com/olicordeportugal/" target="_blank">
+                <img src="../img/assets/facebook.png" alt="facebook link">
+            </a>
+            <a href="https://www.instagram.com/licor_beirao/" target="_blank">
+                <img src="../img/assets/insta.png" alt="instagram link">
+            </a>
+            <a href="https://www.youtube.com/user/OLICORDEPORTUGAL" target="_blank">
+                <img src="../img/assets/youtube.png" alt="youtube link">
+            </a>
+        </section>
+        <footer class="bggrey gridrow nogutter footer">
             <section class="col7">
-                <article class="gridrow logos">
-                    <div class="alignleft">
-                        <img class="logo_wip col8" src="../img/logo/WhenInPortugal_logo-05.png" alt="When in Portugal">
-                        <img class="logo_pdr col4" src="../img/assets/drink_responsibly.png" alt="Please drink responsibly">
+                <article class="footer gridrow contentcenter">
+                    <div class="col8 gridrow contentcenter">
+                        <img class="footerlogo col8" src="../img/logo/WhenInPortugal_logo-05.png" alt="When in Portugal">
+                        <img class="footerlogo col4" src="../img/assets/drink_responsibly.png" alt="Please drink responsibly">
                     </div>
-                    <img class="logo_lc margins col4" src="../img/logo/01_Logo_Versao-Principal_Cores.png" alt="When in Portugal">
+                    <img class="footerlogo col4" src="../img/logo/01_Logo_Versao-Principal_Cores.png" alt="When in Portugal">
                 </article>
             </section>
-            <section class="links_container col5 col-m8">
-                <article class="links">
-                    <a class="single_link" href="#">Terms & Conditions</a>
-                    <a class="single_link" href="#">Privacy Policy</a>
-                    <a class="single_link" href="#">Cookies Policy</a>
+            <section class="contentcenter col5 col-m8">
+                <article class="contentcenter col12">
+                    <a class="link" href="#">Terms & Conditions</a>
+                    <a class="link" href="#">Privacy Policy</a>
+                    <a class="link" href="#">Cookies Policy</a>
                 </article>
             </section>
         </footer>
