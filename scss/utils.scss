@@ -81,8 +81,9 @@ h2{
     font-size: 15px;
     font-family: proboldlbfont;
     line-height: 1.17;
+    background-color: white;
     color: $red;
-    margin-top: 20px;
+    margin-top: $gridgutter;
 }
 h3{
     font-size: 15px;
@@ -136,6 +137,7 @@ h4{
 .button_upload{
     display: flex;
     height: 20px;
+    max-width: 150px;
     align-items: center;
     padding: 10px;
     text-transform: uppercase;
@@ -214,6 +216,7 @@ img{
     h2{
         font-size: $gridgutter;
         margin-top: $gridgutter * 3;
+        color: $red;
         &:before,
         &:after {
             content: '';

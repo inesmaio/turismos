@@ -6,6 +6,9 @@
     display: flex;
     justify-content: center;
 }
+.info_form{
+    margin-bottom: $gridgutter;
+}
 .form_field{
     width: 100%;
     height: $gridgutter * 2;
@@ -43,6 +46,87 @@
 .foto_prefil{
     margin-top: 10px;
 }
+.info_details{
+    background-color: $yellow;
+}
+.about_you h3{
+    margin: 20px 0px 0 0;
+}
+.about_you_form{
+    margin-top: $gridgutter;
+}
+.checkbox{
+    padding-left: 10px !important;
+}
+.checkbox_label{
+    font-family: prolightlbfont;
+    font-size: 12px;
+    line-height: 30px;
+    margin-left: 30px;
+    cursor: pointer;
+}
+.checkbox label::before{
+    content: "";
+    display: inline-block;
+    height: 20px;
+    width: 20px;
+    top: 3px;
+    border: 1px solid; 
+    border-radius: 5px; 
+    cursor: pointer;
+}
+.checkbox label::after{
+    content: "";
+    display: inline-block;
+    height: 3px;
+    width: 9px;
+    border-left: 4px solid;
+    border-bottom: 4px solid;
+    border-radius: 5px;
+    transform: rotate(-45deg);
+    color: $red;
+    left: 5px;
+    top: 10px;
+}
+.checkbox label {
+    position: relative;
+}
+.checkbox label::before,
+.checkbox label::after {
+    position: absolute;
+}
+
+.checkbox input[type="checkbox"] + label::after{
+    content: none;
+}
+.checkbox input[type="checkbox"]:checked + label::after{
+    content: "";
+}
+.form_field{
+    width: 100%;
+    height: $gridgutter * 2;
+    border: 1px solid grey;
+    border-radius: 4px;
+    box-shadow: 0 -4px 2px -2px grey;
+    margin-bottom: $gridgutter * 1;
+    padding-left: 10px;
+    font-family: HelveticaNeue;
+    font-size: 12px;
+    &[type="date"], &[type="button"]{
+        background-color: white;
+        color: grey;
+    }&.textarea{
+        height: 175px;
+    }
+}
+.field_title{
+    margin-top: $gridgutter;
+}
+.submit{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
 @media (min-width: 1224px){
     .winPortugal_img{
         width: 100%;
@@ -66,89 +150,30 @@
     .form_phone_cc{
         padding-left: 0 !important;
     }
-    .btn_upload{
-        width: 150px;
-        height: 45px;
-        background-color: yellow;
-        padding: 20px;
-        border: solid 1px black;
-        cursor: pointer;
-    }
     .form_title_empty::before{
         margin: 0px -20px 0px 60px;
     }    
     .about_you{
         align-items: flex-end;
     }
-    .form_field{
-        width: 100%;
-        height: $gridgutter * 2;
-        border: 1px solid grey;
-        border-radius: 4px;
-        box-shadow: 0 -4px 2px -2px grey;
-        margin-bottom: $gridgutter * 1;
-        padding-left: 10px;
-        font-family: HelveticaNeue;
-        font-size: 12px;
-        &[type="date"], &[type="button"]{
-            background-color: white;
-            color: grey;
-        }&.textarea{
-            height: 175px;
-        }
-    }
+    
     .phone, .cc{
         padding-left: 10px !important;
     }
+    .cc{
+        margin-left: 10px;
+    }
     .checkbox_label{
-        font-family: prolightlbfont;
-        font-size: 12px;
-        line-height: 30px;
         margin-left: 20px;
-        cursor: pointer;
-    }
-    .checkbox label::before{
-        content: "";
-        display: inline-block;
-        height: 20px;
-        width: 20px;
-        top: 3px;
-        border: 1px solid; 
-        border-radius: 5px; 
-        cursor: pointer;
-    }
-    .checkbox label::after{
-        content: "";
-        display: inline-block;
-        height: 3px;
-        width: 9px;
-        border-left: 4px solid;
-        border-bottom: 4px solid;
-        border-radius: 5px;
-        transform: rotate(-45deg);
-        color: $red;
-        left: 5px;
-        top: 10px;
-    }
-    .checkbox label {
-        position: relative;
-    }
-    .checkbox label::before,
-    .checkbox label::after {
-        position: absolute;
-    }
-
-    .checkbox input[type="checkbox"] + label::after{
-        content: none;
-    }
-    .checkbox input[type="checkbox"]:checked + label::after{
-        content: "";
-    }
-    .field_title{
-        margin-top: $gridgutter;
     }
     .form_phone_cc{
         flex-direction: row;
+    }
+    .checkbox{
+        padding-left: 0 !important;
+    }
+    .submit{
+        justify-content: flex-start;
     }
 
 }
