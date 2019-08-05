@@ -26,7 +26,7 @@
         height: 175px;
     }
 }
-#name, #emptyField{
+#name, #emptyField, #empty_phone{
     display: none;
 }
 .error{
@@ -126,6 +126,17 @@
     display: flex;
     justify-content: center;
     align-items: center;
+}
+.cc, .foto{
+    height: 90px;
+}
+.video{
+    height: 60px;;
+}
+#displayElemCc, #displayElemFoto, #displayElemVideo{
+    display: none;
+    font-size: 12px;
+    margin-left: 5px;
 }
 @media (min-width: 1224px){
     .winPortugal_img{

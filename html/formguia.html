@@ -14,12 +14,10 @@
                 <div class="col3 col-m1 offset1 menucontainer">
                     <img class="menu" src="../img/assets/menu.svg" alt="hamburguer menu">
                 </div>
-                <div class="col6 col-m5 contentcenter">
+                <div class="col6 col-m6 contentcenter">
                     <img class="winPortugal_img" src="../img/logo/WhenInPortugal_logo-03.svg" alt="When in Portugal">
                 </div>
-                <div class="col3 col-m2 offset1 contentcenter">
-                    <button class="yellowbutton button" type="button" onclick="location.href = '#'">Become a Buddy</button>
-                </div>
+                <div class="col3"></div>
             </nav>
         </section>
         <h2 class="form_title">Torna-te um Guia Local</h2>
@@ -31,40 +29,42 @@
             <section class="col-m8 col5 info_form">
                     <div class="col-m8 col12 form_nome">
                         <h4>Nome <span class="red">*</span><span class="error" id="name"> Por favor preencha o campo</span></h4>
-                        <input class="form_field" type="text" id="firstname" name="firstname" placeholder="Nome" onblur="validateText()">
+                        <input class="form_field" type="text" id="firstname" name="firstname" placeholder="nome" onblur="validateText()">
                     </div>
                     <div class="col-m8 col12 form_aniv">
                         <h4>Data de Aniversário <span class="red">*</span></h4>
-                        <input class="form_field" type="date" name="birthdate" placeholder="mês/dia/ano">
+                        <input class="form_field" type="text" id="bdate" name="birthdate" placeholder="dia/mês/ano" onfocus="(this.type='date')" onblur="(this.type='text')">
                     </div>
                     <div class="col-m8 col12 form_email">
                         <h4>Email <span class="red">*</span><span class="error" id="emptyField"> Por favor preencha o campo</span></h4></h4>
-                        <input class="form_field" type="email" id="email" placeholder="Email" onblur="validateEmail()">
+                        <input class="form_field" type="email" id="email" placeholder="email" onblur="validateEmail()">
                     </div>
                     <div class="col-m8 col12 gridrow form_phone_cc">
                         <div class="nogutter-m8 col6 phone">
-                            <h4>Telefone <span class="red">*</span></h4>
-                            <input class="form_field" type="number" name="phone" placeholder="número de telefone">
+                            <h4>Telefone <span class="red">*</span><span class="error" id="empty_phone">Por favor preencha o campo</span></h4>
+                            <input class="form_field" id="phone" type="tel" size="9" name="phone" placeholder="número de telefone" onblur="validatePhone()">
                         </div>
                         <div class="nogutter-m8 col6 cc">
                             <h4>Cartão de Cidadão</h4>
                             <div>
-                                <label for="up_button" class="col8 button button_upload">
+                                <label for="up_cc" class="col8 button button_upload">
                                     <img class="upload_img" src="../img/assets/upload.svg" alt="upload button">
                                     Upload
                                 </label>
-                                <input class="col12 form_field hidden" type="file" name="cc" accept=".jpg, .pdf" id="up_button">
+                                <input class="cc col12 form_field hidden" type="file" name="cc" accept=".jpg, .pdf" id="up_cc" onchange="uploadFeedbackCc()">
+                                <p id="displayElemCc"></p>
                             </div>
                         </div>
                     </div>
                     <div class="gridrow column foto_container">
                         <h4 class="col-m8 col6 foto_prefil">Foto de Perfil</h4>
-                        <div class="col-m8 col6">
-                            <label for="up_button" class="col8 button button_upload">
+                        <div class="foto col-m8 col6">
+                            <label for="up_foto" class="col8 button button_upload">
                                 <img class="upload_img" src="../img/assets/upload.svg" alt="upload button">
                                 Upload
                             </label>
-                            <input class="col12 form_field hidden" type="file" name="cc" accept=".jpg, .pdf" id="up_button" required>
+                            <input class="col12 form_field hidden" type="file" name="foto" accept=".jpg, .pdf" id="up_foto" onchange="uploadFeedbackFoto()">
+                            <p id="displayElemFoto"></p>
                         </div>
                     </div>
             </section>
@@ -204,12 +204,13 @@
                 </section>
                 <section class="gridrow column foto_container">
                     <h4 class="col12 col-m8 field_title">Conta-nos porque adoras a tua cidade! <span class="lighter">Num vídeo max. 1 minuto</span></h4>
-                    <article class="col12 col-m8">
-                        <label for="up_button" class="col4 button button_upload">
+                    <article class="video col12 col-m8">
+                        <label for="up_video" class="col4 button button_upload">
                             <img class="upload_img" src="../img/assets/upload.svg" alt="upload button">
                             Upload
                         </label>
-                        <input class="col12 col-m8 form_field hidden" type="file" name="cc" accept=".mp4, .avi" id="up_button">
+                        <input class="col12 col-m8 form_field hidden" type="file" id="up_video" name="video" accept="video/*, image/jpeg" onchange="uploadFeedbackVideo()">
+                        <p id="displayElemVideo"></p>
                     </article>
                 </section>
                 <section class="gridrow field_title column">
