@@ -52,12 +52,15 @@
 .red{
     color: $red;
 }
+.yellowbg{
+    background-color: $yellow;
+}
 li{
     font-family: HelveticaNeue;
     list-style-type: none;
     margin-top: $gridgutter / 2;
 }
-p{
+p, ul{
     margin: 0;
     font-family: HelveticaNeue;
     line-height: $gridgutter * 1.5;
@@ -81,7 +84,6 @@ h2{
     font-size: 15px;
     font-family: proboldlbfont;
     line-height: 1.17;
-    background-color: white;
     color: $red;
     margin-top: $gridgutter;
 }
@@ -189,15 +191,15 @@ textarea:focus:required:invalid{
 img{
     width: 100%;
 }
+.rspad{
+    padding: 10px;
+}
 .bggrey{
     background-color: $grey;
 }
 .redessocias{
     height: 175px;
     border-bottom: 4px solid $yellow;
-    & img{
-        padding: 0 10px;
-    }
 }
 @media (min-width: 1224px){
     p{

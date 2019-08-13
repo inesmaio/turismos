@@ -122,6 +122,10 @@
 .field_title{
     margin-top: $gridgutter;
 }
+.field_title_feedback{
+    margin-top: $gridgutter;
+    height: 40px;
+}
 .submit{
     display: flex;
     justify-content: center;
@@ -133,11 +137,18 @@
 .video{
     height: 60px;;
 }
-#displayElemCc, #displayElemFoto, #displayElemVideo{
+#displayElemCc, #displayElemFoto, #displayElemVideo, #displayElemLang, #displayElemAge{
     display: none;
     font-size: 12px;
     margin-left: 5px;
 }
+#displayElemAge{
+    padding-left: 25px;
+}
+#displayElemLang{
+    height: 30px;
+}
+
 @media (min-width: 1224px){
     .winPortugal_img{
         width: 100%;

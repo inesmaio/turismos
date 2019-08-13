@@ -22,7 +22,7 @@
         </section>
         <h2 class="form_title">Torna-te um Guia Local</h2>
         <form class="gridrow column" novalidate>
-            <section class="gridrow offset1 info">
+            <section class="gridrow contentcenter info">
                 <section class="sticky_info col4 info_title">
                     <h3>Informação Pessoal</h3>
                 </section>
@@ -52,7 +52,7 @@
                                     Upload
                                 </label>
                                 <input class="cc col12 form_field hidden" type="file" name="cc" accept=".jpg, .pdf" id="up_cc" onchange="uploadFeedbackCc()">
-                                <p id="displayElemCc"></p>
+                                <p class="lighter" id="displayElemCc"></p>
                             </div>
                         </div>
                     </div>
@@ -64,13 +64,13 @@
                                 Upload
                             </label>
                             <input class="col12 form_field hidden" type="file" name="foto" accept=".jpg, .pdf" id="up_foto" onchange="uploadFeedbackFoto()">
-                            <p id="displayElemFoto"></p>
+                            <p class="lighter" id="displayElemFoto"></p>
                         </div>
                     </div>
             </section>
         </section>
         <h2 class="col12 form_title_empty"></h2>
-        <section class="gridrow offset1 info info_details">
+        <section class="gridrow contentcenter info info_details">
             <section class="col4 sticky_info info_title column contentcenter about_you">
                 <h3>Questões</h3>
                 <p>Conta-nos mais sobre ti</p>
@@ -118,7 +118,7 @@
                     </article>
                     <article class="col6 column">
                         <div class="col12 checkbox">
-                            <input class="hidden interests" type="checkbox" id="bares" name="interests" required onclick="return maxFour()">
+                            <input class="hidden interests" type="checkbox" id="bares" name="interests" onclick="return maxFour()">
                             <label class="row" for="bares">
                                 <span class="col10 checkbox_label">Bares e Vida Noturna</span>
                             </label>
@@ -144,7 +144,7 @@
                     </article>
                 </section>
                 <section class="col12 col-m8 field_title">
-                    <h4>Quais são as línguas que falas? <span class="red">*</span></h4>
+                    <h4>Quais são as línguas que falas? <span class="red">*</span><span class="error" id="displayElemLang">Selecione pelo menos uma língua</span></h4>
                 </section>
                 <section class="gridrow col-m8 checkbox">
                     <article class="col4 column">
@@ -210,15 +210,16 @@
                             Upload
                         </label>
                         <input class="col12 col-m8 form_field hidden" type="file" id="up_video" name="video" accept="video/*, image/jpeg" onchange="uploadFeedbackVideo()">
-                        <p id="displayElemVideo"></p>
+                        <p class="lighter" id="displayElemVideo"></p>
                     </article>
                 </section>
                 <section class="gridrow field_title column">
-                    <article class="col12 col-m8 field_title checkbox">
-                        <input class="hidden" type="checkbox" id="adulto" name="adulto">
+                    <article class="col12 col-m8 field_title_feedback checkbox">
+                        <input class="hidden" type="checkbox" id="adulto" name="adulto" onclick="return minOneAge()">
                         <label class="row" for="adulto">
-                            <span class="col10 checkbox_label">Tenho mais de 18 anos e concordo com os termos e condições. <span class="red">*</span></span>
+                            <span class="col10 checkbox_label" id="age">Tenho mais de 18 anos e concordo com os termos e condições. <span class="red">*</span></span>
                         </label>
+                       <h4><span class="error" id="displayElemAge">Confirme que tem mais de 18 anos</span></h4>
                     </article>
                     <article class="col12 col-m8 field_title checkbox">
                         <input class="hidden" type="checkbox" id="gdpr" name="gdpr">
@@ -228,20 +229,20 @@
                     </article>
                 </section>
                 <section class="gridrow submit">
-                    <input class="col4 col-m6 button submit_button" type="submit" value="Submit">
+                    <input class="col4 col-m6 button submit_button" type="button" value="Submit" onclick="minOne(), minOneAge(), maxFour(), validateText(), validateEmail(), validatePhone(), uploadFeedbackCc(), uploadFeedbackFoto(), uploadFeedbackVideo(), minOne()">
                 </section>
             </section>
         </form>
         </section>
         </section>
         <section class="gridrow contentcenter bggrey redessocias">
-            <a href="https://www.facebook.com/olicordeportugal/" target="_blank">
+            <a class="rspad" href="https://www.facebook.com/olicordeportugal/" target="_blank">
                 <img src="../img/assets/facebook.png" alt="facebook link">
             </a>
-            <a href="https://www.instagram.com/licor_beirao/" target="_blank">
+            <a class="rspad" href="https://www.instagram.com/licor_beirao/" target="_blank">
                 <img src="../img/assets/insta.png" alt="instagram link">
             </a>
-            <a href="https://www.youtube.com/user/OLICORDEPORTUGAL" target="_blank">
+            <a class="rspad" href="https://www.youtube.com/user/OLICORDEPORTUGAL" target="_blank">
                 <img src="../img/assets/youtube.png" alt="youtube link">
             </a>
         </section>

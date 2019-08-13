@@ -7,15 +7,20 @@
         <link type="text/css" rel="stylesheet" href="../css/styles.css" />
     </head>
     <body>
-        <header class="sticky">
-            <nav class="gridrow topheader">
-                <img class="menu col-m1" src="../img/assets/menu.svg" alt="hamburguer menu">
-                <h1 class="textcenter col-m6">Free Walking Drinks</h1>
+        <section class="sticky_header">
+            <nav class="gridrow topheader_index_profile">
+                <div class="col3 col-m1 menucontainer">
+                    <img class="menu" src="../img/assets/menu.svg" alt="hamburguer menu">
+                </div>
+                <div class="col6 col-m6 contentcenter">
+                    <img class="winPortugal_img" src="../img/logo/WhenInPortugal_logo-03.svg" alt="When in Portugal">
+                </div>
             </nav>
-        </header>
-        <section class="guide presentation gridrow">
-            <h2 class="col-m8">Hi there! Nice to meet you</h2>
-            <img class="col-m8" id="picvideo" src="../img/assets/videopic.svg" alt="this is an image of a video">
+        </section>
+        <section class="guide presentation gridrow nogutter column">
+            <video id="picvideo" width="100%" controls>
+                <source src="../img/assets/guideMovie.mp4">
+            </video>
         </section>
         <section class="gridrow personalinfo">
             <img class="col-m2 profileimg" src="../img/assets/marianasousa.svg" alt="guide's picture">
@@ -83,7 +88,7 @@
            </div>  
         </footer>
         <section class="sticky_bottom">
-            <button class="col-m8" id="booknow" type="button" onclick="location.href = '#'">Book Now</button>
+            <button class="col-m8 button" id="booknow" type="button" onclick="location.href = '#'">Book Now</button>
         </section>
     </body>
 </html>    

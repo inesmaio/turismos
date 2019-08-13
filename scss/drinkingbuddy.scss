@@ -1,0 +1,59 @@
+.drinkingBuddyText{
+    text-transform: uppercase;
+    font-family: problacklbfont;
+    & p{
+        text-align: center;
+        font-weight: 900;
+        line-height: 40px;
+        font-size: 20px;
+    }
+}
+.register{
+    padding: 20px 0 30px 0;
+}
+#guidemenu{
+    display: none;
+    position: absolute;
+    padding: 20px;
+    justify-content: space-between;
+    height: 200px;
+    background-color: white;
+    font-family: proboldlbfont;
+    border-radius: 10px;
+    left: 0px;
+    & a{
+        text-decoration: none;
+    }
+}
+@media (min-width: 1224px){
+    .register{
+        flex-direction: row;
+    }
+    .drinkingBuddyText{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        padding-right: 30px;
+        & p{
+            line-height: 70px;
+            font-size: 40px;
+        }
+    }
+    .profilepic{
+        cursor: pointer;
+        border-radius: 50px;
+        box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    }
+    #guidemenu{
+        left: initial;
+        width: 15%;
+        & a{
+            transition: all .5s ease;
+            &:hover{
+                font-size: 20px;
+            }
+        }
+    }
+
+
+}

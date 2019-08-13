@@ -13,7 +13,7 @@ const validateEmail = () => {
     const email = document.getElementById("email");
     const emptyField  = document.getElementById("emptyField");
     const re = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
-    if (email.value == null){
+    if (email.value == null || email.value == ""){
         emptyField.style.display = "inline";
         emptyField.innerHTML = "Por favor preencha o campo";
         return false;
@@ -74,7 +74,6 @@ const uploadFeedbackVideo= () => {
     displayElem.style.display="flex";
     displayElem.innerHTML = fileName;
 }
-
 function maxFour() {
     let checkboxes = document.getElementsByName("interests");
     let checkedNum = 0;
@@ -91,3 +90,44 @@ function maxFour() {
         }
     }
 }
+
+function minOne() {
+    const displayElemLang = document.getElementById("displayElemLang");
+    const checkboxes = document.getElementsByName("lang");
+    let checkedNum = 0;
+    for (let i = 0; i < checkboxes.length; i++) {
+        if (checkboxes[i].checked) {
+        checkedNum++;
+        }
+    }
+    if (checkedNum == 0){
+        displayElemLang.style.display="inline";
+    } else {
+        displayElemLang.style.display="none";
+    }
+}
+function minOneAge() {
+    const displayElemAge = document.getElementById("displayElemAge");
+    const checkboxes = document.getElementById("adulto");
+    if (checkboxes.checked) {
+        displayElemAge.style.display="none";
+    } else {
+        displayElemAge.style.display="inline";
+    }
+}
+
+
+//Dropdown Menu - Guia
+
+function openMenu(){
+    const dropdownMenu = document.getElementById("guidemenu");
+    dropdownMenu.style.display="flex";
+
+}
+function closeMenu(){
+    const dropdownMenu = document.getElementById("guidemenu");
+    dropdownMenu.style.display="none";
+
+}
+
+
