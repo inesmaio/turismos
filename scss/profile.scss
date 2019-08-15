@@ -10,9 +10,8 @@
 .profileimg{
     margin-top: $gridgutter;
     border-radius: 50%;
-    width: 250px;
-    height: 250px;
-
+    width: 150px;
+    height: 150px;
 }
 .stars{
     width: $gridgutter;
@@ -108,6 +107,10 @@
     }
     .button_bottom{
         display: none;
+    }
+    .profileimg{
+        width: 250px;
+        height: 250px;
     }
    
 }
