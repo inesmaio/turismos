@@ -2,10 +2,14 @@
   "name": "proj360",
   "version": "1.0.0",
   "description": "Aplicação Licor Beirão",
-  "main": "script.js",
+  "main": "server.js",
+  "engines": {
+    "node": "10.x"
+  },
   "scripts": {
-    "build": "sass ./scss/styles.scss ./css/styles.css",
-    "watch": "sass --watch ./scss/styles.scss ./css/styles.css"
+    "build": "sass ./scss/styles.scss ./public/css/styles.css",
+    "watch": "sass --watch ./scss/styles.scss ./public/css/styles.css",
+    "start": "npm run-script build && node server.js"
   },
   "repository": {
     "type": "git",
@@ -17,7 +21,8 @@
     "url": "https://github.com/inesmaio/edit_lb/issues"
   },
   "homepage": "https://github.com/inesmaio/edit_lb#readme",
-  "dependencies": {
+  "devDependencies": {
+    "express": "^4.17.1",
     "sass": "^1.22.5"
   }
 }
