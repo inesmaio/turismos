@@ -21,7 +21,7 @@
     "url": "https://github.com/inesmaio/edit_lb/issues"
   },
   "homepage": "https://github.com/inesmaio/edit_lb#readme",
-  "devDependencies": {
+  "dependencies": {
     "express": "^4.17.1",
     "sass": "^1.22.5"
   }
