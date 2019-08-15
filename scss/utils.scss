@@ -11,8 +11,7 @@
 }
 .sticky_bottom{
     position: sticky;
-    bottom: 0;
-    padding: $gridgutter;
+    bottom: 15px;
 }
 .menu{
     width: $gridgutter * 1.5 !important;
@@ -64,7 +63,7 @@ p, ul{
     margin: 0;
     font-family: HelveticaNeue;
     line-height: $gridgutter * 1.5;
-    font-size: 10px;
+    font-size: 15px;
     letter-spacing: 2px;
     color: $black;
 }
@@ -98,7 +97,7 @@ h3{
 h4{
     margin: 0;
     margin-bottom: $gridgutter / 2;
-    font-size: 15px;
+    font-size: $gridgutter;
     font-family: proboldlbfont;
     font-weight: bolder;
     line-height: 1.17;
@@ -197,14 +196,14 @@ img{
 .bggrey{
     background-color: $grey;
 }
+.bgblack{
+    background-color: $black;
+}
 .redessocias{
     height: 175px;
     border-bottom: 4px solid $yellow;
 }
 @media (min-width: 1224px){
-    p{
-        font-size: 15px;
-    }
     .sticky_info{
         position: sticky;
         box-sizing: border-box;
@@ -216,7 +215,7 @@ img{
         
     }
     h2{
-        font-size: $gridgutter;
+        font-size: $gridgutter + 5;
         margin-top: $gridgutter * 3;
         color: $red;
         &:before,

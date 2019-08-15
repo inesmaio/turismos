@@ -9,86 +9,114 @@
     <body>
         <section class="sticky_header">
             <nav class="gridrow topheader_index_profile">
-                <div class="col3 col-m1 menucontainer">
-                    <img class="menu" src="../img/assets/menu.svg" alt="hamburguer menu">
-                </div>
-                <div class="col6 col-m6 contentcenter">
-                    <img class="winPortugal_img" src="../img/logo/WhenInPortugal_logo-03.svg" alt="When in Portugal">
-                </div>
+                <div class="col3 col-m1 offset-m1 menucontainer">
+                        <img class="menu" src="../img/assets/menu.svg" alt="hamburguer menu">
+                    </div>
+                    <div class="col6 col-m5 contentcenter">
+                       <a href="./hpguide.html"><img class="winPortugal_img" src="../img/logo/WhenInPortugal_logo-03.svg" alt="When in Portugal"></a> 
+                    </div>
+                    <div class="col3 offset1 contentcenter">
+                        <button class="yellowbutton button button_profile" type="button" onclick="location.href = '#'">Book Now</button>
+                    </div>
             </nav>
         </section>
-        <section class="guide presentation gridrow nogutter column">
-            <video id="picvideo" width="100%" controls>
+        <section class="guide presentation contentcenter bgblack gridrow nogutter column">
+            <video id="picvideo" class="col10" width="100%" controls>
                 <source src="../img/assets/guideMovie.mp4">
             </video>
         </section>
-        <section class="gridrow personalinfo">
-            <img class="col-m2 profileimg" src="../img/assets/marianasousa.svg" alt="guide's picture">
-            <article class="nameinfo starreviews">
-                <h2 class="profilename">Mariana Sousa</h2>
-                <div class="gridrow">
-                    <img class="stars" src="../img/assets/starred.svg" alt="rating star">
-                    <img class="stars" src="../img/assets/starred.svg" alt="rating star">
-                    <img class="stars" src="../img/assets/starred.svg" alt="rating star">
-                    <img class="stars" src="../img/assets/starred.svg" alt="rating star">
-                    <img class="stars" src="../img/assets/starred.svg" alt="rating star">
+        <section class="gridrow column personalinfo">
+            <section class="gridrow contentcenter col4 offset1">
+                <img class="profileimg" src="../img/assets/personaTwo.jpg" alt="guide's picture">
+                <article class="col6 col-m5 column nameinfo starreviews">
+                    <h3 class="red profilename">Mariana Sousa</h3>
+                    <div class="gridrow">
+                        <img class="stars" src="../img/assets/starred.svg" alt="rating star">
+                        <img class="stars" src="../img/assets/starred.svg" alt="rating star">
+                        <img class="stars" src="../img/assets/starred.svg" alt="rating star">
+                        <img class="stars" src="../img/assets/starred.svg" alt="rating star">
+                        <img class="stars" src="../img/assets/starred.svg" alt="rating star">
+                    </div>
                     <p class="numreviews">65 reviews</p>
+                </article>
+            </section>
+            <section class="about_profile col6">
+                <h3 class="red">About</h3>
+                <div class="separator">
+                    <p>O Lorem Ipsum é um texto modelo da indústria tipográfica e de impressão. O Lorem Ipsum tem vindo a ser o texto padrão usado por estas indústrias desde o ano de 1500, quando uma misturou os caracteres de um texto para criar um espécime de livro. Este texto não só sobreviveu 5 séculos, mas também o salto para a tipografia electrónica, mantendo-se essencialmente inalterada.</p>           
+                    <section class="gridrow information">
+                        <ul>
+                            <li>Languages: <span class="bold">English, Portuguese</span></li>
+                            <li>Specialty: <span class="bold">Museums</span></li>
+                        </ul>
+                    </section>
                 </div>
-            </article>
+            </section>
         </section>
-        <section class="about_profile">
-            <h2>About</h2>
-            <p>O Lorem Ipsum é um texto modelo da indústria tipográfica e de impressão. O Lorem Ipsum tem vindo a ser o texto padrão usado por estas indústrias desde o ano de 1500, quando uma misturou os caracteres de um texto para criar um espécime de livro. Este texto não só sobreviveu 5 séculos, mas também o salto para a tipografia electrónica, mantendo-se essencialmente inalterada.</p>           
-        </section>
-        <section class="gridrow information">
-            <ul>
-                <li>Languages: <span class="bold">English, Portuguese</span></li>
-                <li>Specialty: <span class="bold">Museums</span></li>
-            </ul>
-        </section>
-        <section class="reviews">
-            <h2 class="reviews_title">Reviews</h2>
+        <section class="gridrows reviews">
+            <h2 class="red reviews_title">Reviews</h2>
             <article class= "gridrow reviews_container">
-                <div class="gridrow reviewersdetails">
-                    <img class="reviewphoto" src="../img/assets/marianasousa.svg" alt="guide's picture">
+                <div class="gridrow col4 reviewersdetails">
+                    <img class="reviewphoto" src="../img/assets/personaThree.jpg" alt="guide's picture">
+                    <div class="col-m8 reviewdate">
+                        <h3 class="reviewername">Carla</h3>
+                        <h4>10 junho 2019</h4>
+                    </div>
+                </div>
+                <p class="col6">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse nisi justo, aliquet egestas ornare eget, porttitor a turpis. In hac habitasse platea dictumst. Phasellus quis fringilla libero. Morbi id odio urna. Aenean sit amet tempor mauris. Sed dapibus interdum nisi, a ornare ex. Phasellus eu lacus eget lectus vestibulum scelerisque in nec lacus. Praesent vitae lacus vel dolor facilisis blandit.</p>
+            </article>
+            <article class= "gridrow reviews_container">
+                <div class="gridrow col4 reviewersdetails">
+                    <img class="reviewphoto" src="../img/assets/personaFour.jpg" alt="guide's picture">
                     <div class="col-m8 reviewdate">
                         <h3 class="reviewername">Miguel</h3>
                         <h4>10 junho 2019</h4>
                     </div>
                 </div>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse nisi justo, aliquet egestas ornare eget, porttitor a turpis. In hac habitasse platea dictumst. Phasellus quis fringilla libero. Morbi id odio urna. Aenean sit amet tempor mauris. Sed dapibus interdum nisi, a ornare ex. Phasellus eu lacus eget lectus vestibulum scelerisque in nec lacus. Praesent vitae lacus vel dolor facilisis blandit.</p>
+                <p class="col6">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse nisi justo, aliquet egestas ornare eget, porttitor a turpis. In hac habitasse platea dictumst. Phasellus quis fringilla libero. Morbi id odio urna. Aenean sit amet tempor mauris. Sed dapibus interdum nisi, a ornare ex. Phasellus eu lacus eget lectus vestibulum scelerisque in nec lacus. Praesent vitae lacus vel dolor facilisis blandit.</p>
             </article>
             <article class= "gridrow reviews_container">
-                <div class="gridrow reviewersdetails">
-                    <img class="reviewphoto" src="../img/assets/marianasousa.svg" alt="guide's picture">
+                <div class="gridrow col4 reviewersdetails">
+                    <img class="reviewphoto" src="../img/assets/personaOne.jpg" alt="guide's picture">
                     <div class="col-m8 reviewdate">
                         <h3 class="reviewername">Miguel</h3>
                         <h4>10 junho 2019</h4>
                     </div>
                 </div>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse nisi justo, aliquet egestas ornare eget, porttitor a turpis. In hac habitasse platea dictumst. Phasellus quis fringilla libero. Morbi id odio urna. Aenean sit amet tempor mauris. Sed dapibus interdum nisi, a ornare ex. Phasellus eu lacus eget lectus vestibulum scelerisque in nec lacus. Praesent vitae lacus vel dolor facilisis blandit.</p>
-            </article>
-            <article class= "gridrow reviews_container">
-                <div class="gridrow reviewersdetails">
-                    <img class="reviewphoto" src="../img/assets/marianasousa.svg" alt="guide's picture">
-                    <div class="col-m8 reviewdate">
-                        <h3 class="reviewername">Miguel</h3>
-                        <h4>10 junho 2019</h4>
-                    </div>
-                </div>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse nisi justo, aliquet egestas ornare eget, porttitor a turpis. In hac habitasse platea dictumst. Phasellus quis fringilla libero. Morbi id odio urna. Aenean sit amet tempor mauris. Sed dapibus interdum nisi, a ornare ex. Phasellus eu lacus eget lectus vestibulum scelerisque in nec lacus. Praesent vitae lacus vel dolor facilisis blandit.</p>
+                <p class="col6">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse nisi justo, aliquet egestas ornare eget, porttitor a turpis. In hac habitasse platea dictumst. Phasellus quis fringilla libero. Morbi id odio urna. Aenean sit amet tempor mauris. Sed dapibus interdum nisi, a ornare ex. Phasellus eu lacus eget lectus vestibulum scelerisque in nec lacus. Praesent vitae lacus vel dolor facilisis blandit.</p>
             </article>
         </section>
-        <footer class="gridrow footer">
-            <div class="nogutter-m">
-                <a href="#">Home</a><br>
-                <a href="#">Terms & Conditions</a><br>
-                <a href="#">Privacy Policy</a><br>
-                <a href="#">Cookies Policy</a>
-           </div>  
-        </footer>
-        <section class="sticky_bottom">
-            <button class="col-m8 button" id="booknow" type="button" onclick="location.href = '#'">Book Now</button>
+        <section class="gridrow contentcenter bggrey redessocias">
+                <a class="rspad" href="https://www.facebook.com/olicordeportugal/" target="_blank">
+                    <img src="../img/assets/facebook.png" alt="facebook link">
+                </a>
+                <a class="rspad" href="https://www.instagram.com/licor_beirao/" target="_blank">
+                    <img src="../img/assets/insta.png" alt="instagram link">
+                </a>
+                <a class="rspad" href="https://www.youtube.com/user/OLICORDEPORTUGAL" target="_blank">
+                    <img src="../img/assets/youtube.png" alt="youtube link">
+                </a>
+            </section>
+            <footer class="bggrey gridrow nogutter footer">
+                <section class="col7">
+                    <article class="footer gridrow contentcenter">
+                        <div class="col8 gridrow contentcenter">
+                            <img class="footerlogo col8" src="../img/logo/WhenInPortugal_logo-05.png" alt="When in Portugal">
+                            <img class="footerlogo col4" src="../img/assets/drink_responsibly.png" alt="Please drink responsibly">
+                        </div>
+                        <img class="footerlogo col4" src="../img/logo/01_Logo_Versao-Principal_Cores.png" alt="When in Portugal">
+                    </article>
+                </section>
+                <section class="contentcenter col5 col-m8">
+                    <article class="contentcenter col12">
+                        <a class="link" href="#">Terms & Conditions</a>
+                        <a class="link" href="#">Privacy Policy</a>
+                        <a class="link" href="#">Cookies Policy</a>
+                    </article>
+                </section>
+            </footer>
+        <section class="gridrow contentcenter sticky_bottom">
+            <button class="col-m6 button button_bottom" id="booknow" type="button" onclick="location.href = '#'">Book Now</button>
         </section>
     </body>
 </html>    

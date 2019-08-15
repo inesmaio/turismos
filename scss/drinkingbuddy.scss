@@ -16,11 +16,11 @@
     position: absolute;
     padding: 20px;
     justify-content: space-between;
+    align-items: flex-end;
     height: 200px;
     background-color: white;
     font-family: proboldlbfont;
-    border-radius: 10px;
-    left: 0px;
+    left: 180px;
     & a{
         text-decoration: none;
     }
@@ -45,8 +45,9 @@
         box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
     }
     #guidemenu{
-        left: initial;
-        width: 15%;
+        right: -880px;
+        width: 170px;
+        border-radius: 10px;
         & a{
             transition: all .5s ease;
             &:hover{

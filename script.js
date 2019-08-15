@@ -1,14 +1,20 @@
+//Validações Formulário
+
+
+//Campo Nome
 const validateText = () => {
     const name = document.getElementById("firstname");
     const showMsgClass  = document.getElementById("name");
     if (name.value == null || name.value == ""){
         showMsgClass.style.display = "inline";
         return false;
-    } 
-    showMsgClass.style.display = "none";
-    return true;
+    } else {
+        showMsgClass.style.display = "none";
+        return true;
+    }
 };
 
+//Campo Email
 const validateEmail = () => {
     const email = document.getElementById("email");
     const emptyField  = document.getElementById("emptyField");
@@ -27,11 +33,7 @@ const validateEmail = () => {
     }
 };
 
-const validateDate = () => {
-    const date = document.getElementById("bday").value;
-
-};
-
+//Campo Telefone
 const validatePhone = () => {
     const phone = document.getElementById("phone");
     const empty_phone = document.getElementById("empty_phone");
@@ -50,30 +52,16 @@ const validatePhone = () => {
     }
 };
 
-const uploadFeedbackCc = () => {
-    const displayElem = document.getElementById("displayElemCc");
-    const fileValue = document.getElementById("up_cc").value.split("\\");
+//Nome dos Ficheiros de Upload
+const uploadFeedback = (elem, file) => {
+    const displayElem = document.getElementById(elem);
+    const fileValue = document.getElementById(file).value.split("\\");
     const index = fileValue.length - 1;
     const fileName = fileValue[index];
     displayElem.style.display="flex";
     displayElem.innerHTML = fileName;
 }
-const uploadFeedbackFoto = () => {
-    const displayElem = document.getElementById("displayElemFoto");
-    const fileValue = document.getElementById("up_foto").value.split("\\");
-    const index = fileValue.length - 1;
-    const fileName = fileValue[index];
-    displayElem.style.display="flex";
-    displayElem.innerHTML = fileName;
-}
-const uploadFeedbackVideo= () => {
-    const displayElem = document.getElementById("displayElemVideo");
-    const fileValue = document.getElementById("up_video").value.split("\\");
-    const index = fileValue.length - 1;
-    const fileName = fileValue[index];
-    displayElem.style.display="flex";
-    displayElem.innerHTML = fileName;
-}
+//Selecionar no máximo 4 opções
 function maxFour() {
     let checkboxes = document.getElementsByName("interests");
     let checkedNum = 0;
@@ -91,34 +79,39 @@ function maxFour() {
     }
 }
 
-function minOne() {
-    const displayElemLang = document.getElementById("displayElemLang");
-    const checkboxes = document.getElementsByName("lang");
+//Selecionar no minimo 1 opção
+function minOne(elem, checkbox) {
+    const display = document.getElementById(elem);
+    const checkboxes = document.getElementsByName(checkbox);
     let checkedNum = 0;
     for (let i = 0; i < checkboxes.length; i++) {
         if (checkboxes[i].checked) {
         checkedNum++;
         }
     }
-    if (checkedNum == 0){
-        displayElemLang.style.display="inline";
+    if (checkedNum === 0){
+        display.style.display="inline";
+        return false
     } else {
-        displayElemLang.style.display="none";
+        display.style.display="none";
+        return true;
     }
 }
+//Maiores de 18
 function minOneAge() {
     const displayElemAge = document.getElementById("displayElemAge");
     const checkboxes = document.getElementById("adulto");
     if (checkboxes.checked) {
         displayElemAge.style.display="none";
+        return true;
     } else {
         displayElemAge.style.display="inline";
+        return false;
     }
 }
 
 
 //Dropdown Menu - Guia
-
 function openMenu(){
     const dropdownMenu = document.getElementById("guidemenu");
     dropdownMenu.style.display="flex";
@@ -130,4 +123,16 @@ function closeMenu(){
 
 }
 
+//Interesses
+const funcInt = () => {maxFour(), minOne("displayElemInt", "interests")} 
+
+//Botão Submit
+const goToProfile = () =>{
+    const validations = [minOne("displayElemLang", "lang"), minOne("displayElemInt", "interests"), minOneAge(), validateText(), validateEmail(), validatePhone(),];
+    const result = (acc, item) => item === false ? acc + 1 : acc;
+    const go = validations.reduce(result, 0);
+    if (go === 0) {
+        location.href="./drinkingbuddy.html";
+    }
+}
 

@@ -1,5 +1,6 @@
 .nameinfo{
     margin-top: $gridgutter;
+    justify-content: center;
 }
 .profilename{
     margin-top: 0;
@@ -8,6 +9,10 @@
 }
 .profileimg{
     margin-top: $gridgutter;
+    border-radius: 50%;
+    width: 250px;
+    height: 250px;
+
 }
 .stars{
     width: $gridgutter;
@@ -16,17 +21,14 @@
 .reviews{
     margin: $gridgutter;
 }
-.about_profile, .numreviews{
+.about_profile{
     margin-left: $gridgutter;
     margin-right: $gridgutter;
 }
 .about_profile h2{
     justify-content: flex-start;
 }
-#booknow{
-    height: $gridgutter * 3;
-    width: 100%;
-}
+
 .reviews, #reviewsdetails{
     flex-direction: column;
 }
@@ -34,7 +36,10 @@
     justify-content: flex-start;
 }
 .reviewphoto{
-    padding-bottom: $gridgutter;
+    margin-bottom: $gridgutter;
+    border-radius: 50%;
+    width: 150px;
+    height: 150px;;
 }
 .details{
     padding-left: 0;
@@ -58,4 +63,51 @@
 } 
 .information ul{
     padding: 20px;
+}
+.button_profile{
+    display: none;
+}
+@media (min-width: 1224px){
+    .profilename{
+        margin-bottom: $gridgutter;
+    }
+    .numreviews{
+        margin-top: $gridgutter;
+    }
+    .personalinfo{
+        flex-direction: row;
+    }
+    .information ul {
+        padding: 0;
+    }
+
+    .about_profile{
+     & h3{
+        justify-content: flex-start;
+        margin: 30px 20px;
+    }
+    }
+    .separator{
+        border-left: 2px solid #dd052b;
+        padding-left: 20px;
+    }   
+    .reviews{
+        margin-top: 60px;
+    }
+    .reviews_container{
+        flex-direction: row;
+    }
+    .reviews_title{
+        padding: 70px 0;
+    }
+    .sticky_bottom{
+        padding: 0;
+    }
+    .button_profile{
+        display: flex;
+    }
+    .button_bottom{
+        display: none;
+    }
+   
 }

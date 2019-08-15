@@ -137,7 +137,7 @@
 .video{
     height: 60px;;
 }
-#displayElemCc, #displayElemFoto, #displayElemVideo, #displayElemLang, #displayElemAge{
+#displayElemCc, #displayElemFoto, #displayElemVideo, #displayElemLang, #displayElemAge, #displayElemInt{
     display: none;
     font-size: 12px;
     margin-left: 5px;
@@ -145,7 +145,7 @@
 #displayElemAge{
     padding-left: 25px;
 }
-#displayElemLang{
+#displayElemLang, #displayElemInt{
     height: 30px;
 }
 
